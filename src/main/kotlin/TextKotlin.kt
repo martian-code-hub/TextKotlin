@@ -1,5 +1,7 @@
 fun main(args: Array<String>) {
-    text1()
+    textHelloWorld()
+//    print(sum(1, 3, 6));
+//    print(vars(1, 3, 6, 9, 11));
 }
 
 //判空
@@ -14,3 +16,12 @@ fun text1() {
     var l = name?.length ?: -1
     print(l)
 }
+
+fun textHelloWorld() {
+    var name: String? = null
+    name = "hello world"
+    var l = name?.length ?: -1
+    print(name)
+}
+
+

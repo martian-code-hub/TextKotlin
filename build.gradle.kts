@@ -8,6 +8,10 @@ buildscript {
     kotlin_version = "1.2.10"
 
     repositories {
+//        maven { url 'https://maven.aliyun.com/repository/public'}
+//        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         mavenCentral()
     }
     
@@ -24,6 +28,10 @@ apply {
 val kotlin_version: String by extra
 
 repositories {
+//    maven { url 'https://maven.aliyun.com/repository/public'}
+//    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+//    maven { url 'https://maven.aliyun.com/repository/google' }
+//    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
     mavenCentral()
 }
 
