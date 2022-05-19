@@ -5,7 +5,45 @@ package com.martian.kotlin.`for`
  * on 2021/8/31
  */
 fun main(args: Array<String>) {
-    testBack()
+    testReturn();
+//    testBreak();
+//    testBack()
+//    testBack()
+}
+
+/**
+ * return
+ */
+fun testReturn() {
+    val items = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+    items.forEach() {
+        if (it == 5) return
+        println("it:$it")
+    }
+    //这个 return 表达式从最直接包围它的函数即 testReturn 中返回
+    println("-------1-------")
+    items.forEach(fun(value: Int) {
+        if (value == 5) return
+        println("it:$value")
+    })
+    println("-------2-------")
+    items.forEach() lit@{
+        if (it == 5) return@lit
+        println("it:$it")
+    }
+    println("------end--------")
+
+}
+
+
+fun testBreak() {
+    loop@ for (i in 1..10) {
+        for (j in 1..10) {
+            println("i:$i j:$j")
+            if (i == 2 && j == 3) break@loop
+        }
+    }
 }
 
 /**
@@ -67,16 +105,16 @@ fun testBack() {
         }
     }
     println("-back-")
-    val items = listOf(1,2,3,4,5,6,7,8,9)
-    items.forEach()lit@{
-        if(it == 5)return@lit
+    val items = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
+    items.forEach() lit@{
+        if (it == 5) return@lit
         println("it:$it")
     }
     println("--------------")
-    items.forEach(){
-        if(it == 5)return
+    items.forEach() {
+        if (it == 5) return
         println("it:$it")
     }
-
+    println("------end--------")
 }
 
