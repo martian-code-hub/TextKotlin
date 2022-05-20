@@ -9,4 +9,7 @@ class Child:MyInterface {
     override fun mathod() {
         println("Child mathod")
     }
+    override fun mathod2(){
+        println("Child mathod2")
+    }
 }
