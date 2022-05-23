@@ -20,7 +20,7 @@ fun testObject() {
         }
     }
     println("a y = ${a.y}")
-
+//    a.foo()
     val person = object {
         var name :String = "martian"
         var age:Int = 18
@@ -67,6 +67,6 @@ fun testObject2(){
 fun testObject3(){
     val c = C();
     // 错误，不能通过外部类的实例访问到该对象
-    //c.User
+//    c.User
     C.User.objectFun()
 }

@@ -5,7 +5,7 @@ package com.martian.kotlin.enum
  * on 2021/9/1
  */
 fun main(args: Array<String>) {
-    Terminal.values()
+
     for (terminal in Terminal.values()){
         println("${terminal.code}  ${terminal.msg}")
     }
