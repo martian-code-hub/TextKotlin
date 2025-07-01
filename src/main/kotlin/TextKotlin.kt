@@ -5,6 +5,7 @@ fun main(args: Array<String>) {
 //    print(sum(1, 3, 6));
 //    print(vars(1, 3, 6, 9, 11));
 //      Text().varargFunc(1,2,3,4,5,6,7,8,9,0);
+    coroutineFunction();
 }
 
 //判空
@@ -27,4 +28,13 @@ fun textHelloWorld() {
     print(name)
 }
 
+fun coroutineFunction() {
+    println("start ${Thread.currentThread().name}")
+    run() {
+        for (i in 1..10) {
+            println("$i ${Thread.currentThread().name}")
+        }
+    }
+    println("end ${Thread.currentThread().name}")
+}
 
