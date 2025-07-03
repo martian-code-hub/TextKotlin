@@ -159,11 +159,30 @@ class Text {
         println("array2- index:3 value:${array2.get(2)}")
     }
 
+    fun testReTurnWhen(color: Int?): String? {
+        return when (color) {
+            0 -> "Red_$color"
+            1 -> "Green_$color"
+            2 -> "Blue_$color"
+            else -> "color is null"
+        }
+    }
+
+    fun testReturnTryCatch(){
+        val result = try {
+            testReTurnWhen(2)
+        } catch (e:Exception){
+            "Exception:$e"
+        }
+
+        println("testReturnTryCatch:$result")
+    }
 }
+
 
 fun main(args: Array<String>) {
     val text = Text();
-//    text.multiLine()
+    text.multiLine()
 //    Text().varargFunc(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
 //    text.lambdaFunc()
 //    text.nullFunc()
@@ -171,5 +190,7 @@ fun main(args: Array<String>) {
 //    text.rangeToFunc()
 //    text.equalFun()
 //    text.bitFunc()
-    text.arrayFunc()
+//    text.arrayFunc()
+//    println(text.testReTurnWhen(1))
+//    text.testReturnTryCatch()
 }
